@@ -1,39 +1,20 @@
-public class Produto {
-    //atributos
-    private String nome;
+public class Produto implements ItemCarrinho {
+
+    private String descricao;
     private double preco;
-    private int quantidade;
 
-    // metodo construtor
-    public Produto(String n, double p, int q) {
-      nome = n;
-      preco = p;
-      quantidade = q;
+    public Produto(String descricao, double preco) {
+        this.descricao = descricao;
+        this.preco = preco;
     }
 
-    // método de acesso
-    public String getNome() {
-        return nome;
-    }
-
+    @Override
     public double getPreco() {
         return preco;
     }
 
-    public int getQuantidade() {
-        return quantidade;
-    }
-
-    //método modificadores
-    public void setNome(String n) {
-        nome = n;      
-    }
-
-    public void setPreco(double p) {
-        preco = p;
-    }
-
-    public void setQuantidades(int q) {
-        quantidade = q;
+    @Override
+    public String getDescricao() {
+        return descricao;
     }
 }
